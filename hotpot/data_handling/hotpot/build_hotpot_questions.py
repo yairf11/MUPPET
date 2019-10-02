@@ -69,7 +69,9 @@ def parse_single(question):
     q_tokens = tokenize(question['question']).words()
     return HotpotQuestion(question_id=question['_id'], question_tokens=q_tokens,
                           answer=question['answer'], supporting_facts=gold_pars, distractors=distractor_pars,
-                          q_type=question['type'], level=question['level'])
+                          q_type=question['type'], level=question['level'],
+                          gold_scores=None, distractor_scores=None,
+                          gold_spans=None, distractor_spans=None)  # todo this is a hack, but works for now
 
 
 def parse_hotpot_data_async(data_path, db_path, num_workers) -> List[HotpotQuestion]:
@@ -124,7 +126,10 @@ def parse_hotpot_data(data_path, tokenizer, docdb: DocDB) -> List[HotpotQuestion
         q_tokens = tokenizer.tokenize(question['question']).words()
         questions.append(HotpotQuestion(question_id=question['_id'], question_tokens=q_tokens,
                                         answer=question['answer'], supporting_facts=gold_pars, distractors=distractor_pars,
-                                        q_type=question['type'], level=question['level']))
+                                        q_type=question['type'], level=question['level'],
+                                        gold_scores=None, distractor_scores=None,
+                                        gold_spans=None, distractor_spans=None)
+                         )  # todo this is a hack, but works for now
     return questions
 
 
