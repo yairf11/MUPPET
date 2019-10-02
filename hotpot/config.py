@@ -5,7 +5,6 @@ Global config options
 """
 
 GLOBAL_DATA_DIR = join(expanduser("~"), "data")
-PROJECT_DIR = join(expanduser("~"), "research/HotpotQA")
 LOCAL_DATA_DIR = join(dirname(dirname(__file__)), "data")
 
 VEC_DIR = join(GLOBAL_DATA_DIR, 'glove')
@@ -19,15 +18,15 @@ DRQA_RANKER = join(LOCAL_DATA_DIR, "db/drqa-docs-tfidf-ngram=2-hash=16777216-tok
 
 CORPUS_DIR = LOCAL_DATA_DIR
 
-HOTPOT_TRAIN_FILE = join(dirname(dirname(__file__)), "hotpot_train_v1.1.json")
-HOTPOT_DEV_DISTRACTOR_FILE = join(dirname(dirname(__file__)), "hotpot_dev_distractor_v1.json")
-HOTPOT_DEV_FULL_WIKI_FILE = join(dirname(dirname(__file__)), "hotpot_dev_fullwiki_v1.json")
-HOTPOT_TEST_FULL_WIKI_FILE = join(dirname(dirname(__file__)), "hotpot_test_fullwiki_v1.json")
+HOTPOT_TRAIN_FILE = join(LOCAL_DATA_DIR, 'hotpot', "hotpot_train_v1.1.json")
+HOTPOT_DEV_DISTRACTOR_FILE = join(LOCAL_DATA_DIR, 'hotpot', "hotpot_dev_distractor_v1.json")
+HOTPOT_DEV_FULL_WIKI_FILE = join(LOCAL_DATA_DIR, 'hotpot', "hotpot_dev_fullwiki_v1.json")
+HOTPOT_TEST_FULL_WIKI_FILE = join(LOCAL_DATA_DIR, 'hotpot', "hotpot_test_fullwiki_v1.json")
 HOTPOT_DATASET_DICT = {'train': HOTPOT_TRAIN_FILE, 'dev': HOTPOT_DEV_DISTRACTOR_FILE,
                        'dev_full': HOTPOT_DEV_FULL_WIKI_FILE}
 
-SQUAD_TRAIN_FILE = join(GLOBAL_DATA_DIR, "squad/train-v1.1.json")
-SQUAD_DEV_FILE = join(GLOBAL_DATA_DIR, "squad/dev-v1.1.json")
+SQUAD_TRAIN_FILE = join(LOCAL_DATA_DIR, "squad/train-v1.1.json")
+SQUAD_DEV_FILE = join(LOCAL_DATA_DIR, "squad/dev-v1.1.json")
 SQUAD_DATASET_DICT = {'train': SQUAD_TRAIN_FILE, 'dev': SQUAD_DEV_FILE}
 SQUAD_ENCODINGS = join(LOCAL_DATA_DIR, 'paragraph_encodings', 'squad')
 
