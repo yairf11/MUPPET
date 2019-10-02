@@ -16,9 +16,6 @@ from sklearn.preprocessing import normalize
 
 from hotpot.tokenizers.tokenizer import ngrams_from_tokens
 from . import utils
-from hotpot.tokenizers.simple_tokenizer import SimpleTokenizer
-from hotpot.tokenizers.spacy_tokenizer import SpacyTokenizer
-from hotpot.tokenizers.corenlp_tokenizer import CoreNLPTokenizer
 from hotpot import tokenizers
 
 logger = logging.getLogger(__name__)
