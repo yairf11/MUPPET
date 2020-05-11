@@ -125,4 +125,5 @@ python hotpot_evaluate_v1.py qa_pred.json data/hotpot/hotpot_dev_fullwiki_v1.jso
 Will be added soon.
 
 ## Pretrained Models
-Will be added soon.
+* [HotpotQA retriever model, paragraph-level, without ELMo inputs](https://drive.google.com/open?id=1yge6TAETmKPlJcfc90gXXyHvfIYj8k7w) (the model with ELMo inputs achieves slightly better results but uses much more memory)
+* [HotpotQA reading comprehension model](https://drive.google.com/open?id=1al2TbaG1-yrDFRODyAUXZJ4SE76pZ5k6)
