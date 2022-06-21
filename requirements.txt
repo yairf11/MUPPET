@@ -3,7 +3,7 @@ ujson
 pandas>=0.18.0
 scikit-learn
 scipy
-numpy==1.14.2
+numpy==1.22.0
 regex
 pexpect==4.2.1
 h5py
